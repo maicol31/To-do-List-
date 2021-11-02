@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css2?family=Francois+One&display=swap');
+*{font-family: 'Francois One', sans-serif;box-sizing: border-box}
+
+html{
+    height: 100%;
+}
+body{
+    width: 100%;
+    background-color: #0F1246;
+    height: 100%;
+    overflow: hidden;
+}
+main{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    color:#5ACFE9;
+}
+button{
+    border-radius: 7px;
+}
+.botonPendiente{
+    width: 107px;
+    height: 30px;;
+    background: #191C4C;
+    border: none;
+    cursor: pointer;
+}
+.botonRealizado{
+    width: 107px;
+    height: 30px;
+    background: #0F1246;
+    border: none;
+    cursor: pointer;
+}
+.contenerdorEdicionCrear{
+    display: flex;
+    width: 100%;  
+    height: 193px;
+    background: #191C4C;
+    padding:10px;
+}
+input{
+    background: #0F1246;
+    border:none;
+    border-radius: 5px;
+    color:white;
+}
+input::placeholder{
+    color: rgba(215, 213, 213, 0.36);
+}
+textarea{
+    background: #0F1246;
+    border:none;
+    color:white;
+    outline: none;
+    resize: none;
+    height: 58.5%;
+}
+label{
+    color:white;
+    font-size: 15px;
+}
+.seccionTareaYDescripcion{
+    display: flex;   
+    flex-direction: column;
+    width: 191px;
+    height: 100%;
+}
+.seccionTiemposPomodoro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 191px;   
+    height: 170px;
+}
+h6{
+    color:white;
+    margin: 0px;
+    font-size: 10px;
+}
+.botonesTiempos{
+    width: 168px;
+    height: 72px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;  
+}
+.botonTiempoPomodoro{
+    background: #191C4C;
+    border: none;
+    color: white;
+}
+.custom{
+    width: 60px;
+    background:white;    
+}
+.botonesCancelarYGuardar{
+    display: flex;
+    justify-content: space-around;
+    width:90%;
+}
+.cancelar{
+    background: #C4C4C4;
+    color:white;
+    border: none;
+    cursor: pointer;
+}
+.guardar{
+    background: #00C7FA;
+    color:white;
+    border: none;
+    cursor: pointer;
+}
+.tarea{
+    width: 40%;
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    color: #00C7FA;
+    background-color: #191C4C;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    justify-content: space-around;
+}
+.tarea input{
+    margin-left: 5%;
+}
+.tarea p{
+    margin-left: 10%;
+}
+.tarea img{
+    display: flex;
+    justify-self: flex-end;
+    align-self: flex-end;
+}
+.bordeSeleccionado{
+width:10px;
+height: 81px;
+background-color: #191f70;
+display:none;
+}
+input[type="checkbox"]{
+    appearance:none;
+    -webkit-appearance:none;
+    width: 26px;
+    height: 26px;
+    background-color: #00C7FA;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius: 50%;
+}
+input[type="checkbox"]:after{
+    font-family:"Font Awesome 5 Free";
+    font-weight:700;
+    content:"\f00c";
+    font-size:15px;
+    color:white;
+}
+input[type="checkbox"]:checked{
+    background-color: #C4C4C4;
+}
+.tareaCheckbox{
+    display:flex;
+    align-items: center;
+    width:85%;
+    height:40%;
+}
+.lineaTareaRealizada{
+    position:relative;
+    left:-23px;
+    width:160px;
+    height:3px;
+    background-color: #C4C4C4;
+    display:none;
+}
+
+.comando .p{
+    height: 100%;
+}
+
+.tarea button{
+    background-color: transparent;
+    border: transparent;
+    outline: none;
+}
+section{
+    display: flex;  
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+    padding-left: 5%;
+}
+aside{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+    height: 100%;
+}
+.botonesSuperiores{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:30% ;
+    height:20%;
+    background-color:#191C4D;
+    border-radius: 15px;
+}
+.btnreloj{
+    background-color: transparent;
+    color: white;
+    border:none;
+    cursor:pointer;
+}
+.btnreloj:hover{
+   background-color: #343658; 
+}
+.infoTaks{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.task{
+  font-size: 40px;
+}
+.botonesSuperiores{
+    background-color: #191C4C;
+    width: 40%;
+    height: 7%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.timer{
+    display:flex;
+    justify-content: center;
+    width: 40%;
+    height: 30%;
+}
+.botonesSuperiores input{
+    height: 60%;
+    width: 25%;
+    border-radius: 7px;
+}
+.todoTareas{
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 2%;
+    width: 100%;
+}
+#insertarTarea{
+    max-height:  75%;
+    overflow: auto;
+}
+#nuevaTarea{
+    color: #1B4A90;
+    font-size: 24px;
+}
+#textoInput{
+    cursor: pointer;
+}
+#botonEditar{
+    cursor: pointer;
+}
+.timerButtons{
+    width: 20%;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+}
+.timerButtons button{
+    background-color: transparent;
+    border:none;
+}
+.timerButtons button:hover{
+    transform: scale(1.4);
+    transition: .5s;
+}
+.playAndPause:focus{
+    transform: scale(1.4);    
+}
+.btnPause img, .btnPlay img{
+    width: 35px;
+    height: 35px;
+}
+.btnRePlay img{
+    width: 27px;
+    height: 27px;
+}
+.base-timer {
+    position: relative;
+    height: 200px;
+    width: 200px;
+}
+.base-timer__circle {
+    fill: none;
+    stroke: none;
+}
+.base-timer__path-elapsed {
+    stroke-width: 7px;
+    stroke: grey;
+}
+.timer{
+    display: flex;
+    justify-content: center;
+}
+.base-timer__svg{
+    width: 100%;
+    height: 90%;
+}
+.base-timer__label {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vw;
+    color: #fff;
+}
+.base-timer__path-remaining{
+  stroke-width: 8px;
+  stroke-linecap: round;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  stroke: currentColor;
+}
+.base-timer__path-remaining.green {
+    color: rgb(65, 184, 131);
+}  
+.base-timer__path-remaining.orange {
+    color: orange;
+}  
+.base-timer__path-remaining.red {
+    color: red;
+}  
+.base-timer__svg {
+  transform: scaleX(-1);
+}
+#botonAñadir{
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+    color: #1B4A90;
+}
+input:focus{
+    color: white;
+    outline: none;
+    padding-left: 5px;
+}
+.seccionTiemposPomodoro input:focus{
+    color: black;
+}
+.seccionTiemposPomodoro input{
+    color: black;
+}
+input[type="number"]::-webkit-inner-spin-button{
+    display: none;
+}
+.botonesTiempos button{
+    cursor: pointer;
+}
+.botonesTiempos button:hover{
+    background-color: #0F1246;
+}
+.tarea{
+    width: 100%;
+}
+#trash{
+    width: 19px;
+    height: 19px;
+}
+.panelComandos{
+    width: 36%;
+    height: 20%;
+    color: #00C7FA;
+    background-color: #191C4D;
+}
+.comandoT{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    color:#00C7FA;
+    font-size: 20px;
+}
+.comandoSubtitulos{
+    display:flex;
+    justify-content:space-around;
+    width: 100%;
+    height:15%;
+    color: white;
+}
+.comandos{
+height: 60%;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+.comando{
+    width: 100%;
+    height: 35px;
+}
+.p{
+    display:flex;
+    justify-content:space-around;
+}
+
+@media screen and (max-width: 600px){
+     body{
+       overflow: scroll;
+       height:150%;
+   }
+    main{
+        display:flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        
+    }
+      .botonesSuperiores{
+        height: 11%;
+        width:100%;
+    }
+    .botonesSuperiores input{
+        height: 86%;
+    }
+    aside{
+        width:100%;
+        height: 45%;
+       justify-content: space-between;
+    }
+    section{
+        width:100%;
+    }
+    .timerButtons{
+        height: 30%;
+    }
+    .timer{
+         height: 65%;
+        width: 50%;
+    }
+     .base-timer{
+        height:130px;
+    }
+    .base-timer__label{
+        font-size: 8vw;
+    }
+   .panelComandos{
+        display: none;
+    }
+    .btnPause img, .btnPlay img{
+        height:20px;
+    }
+     .task{
+        font-size:8px;
+    }
+}
+@media screen and (max-width: 722px){
+    section{
+        width: 100%;
+    }
+    .contenerdorEdicionCrear{
+        display: flex;
+        flex-direction: column;
+        width:340px;
+        height: 60%;
+    }
+     .panelComandos{
+        display: none;
+    }
+    .btnPause img, .btnPlay img{
+        height:20px;
+    }
+     .task{
+        font-size:20px;
+    }
+}
+@media screen and (max-width: 1000px){
+    .contenerdorEdicionCrear{
+        display: flex;
+        flex-direction: column;
+        height: 60%;
+    }
+}
+
+@media screen and (max-width: 480px){
+   body{
+       overflow: scroll;
+   }
+    aside{
+        display: flex;
+        width:97%;
+       height: 45%;
+       justify-content: space-between;
+    }
+    .botonesSuperiores{
+        height: 11%;
+    }
+    .botonesSuperiores input{
+        height: 66%;
+    }
+    .timer{
+        height: 65%;
+        width: 60%;
+    }
+    .base-timer{
+        height:150px;
+    }
+    .base-timer__label{
+        font-size: 8vw;
+    }
+    .timerButtons{
+        height: 7%;
+    }
+    section{
+        width:97%;
+    }
+    .panelComandos{
+        display: none;
+    }
+    .contenerdorEdicionCrear{
+    height: 40%;
+    }
+    textArea{
+        height:50%;
+    }
+    .task{
+        font-size:20px;
+    }
+    .btnPause img, .btnPlay img{
+        height:20px;
+    }
+}

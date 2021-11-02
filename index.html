@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">To Do List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>To Do List Pomodoro</h1>
+    </header>
+    <main>
+        <section id="section">
+            <div class="botonesFiltrado">
+                <button class="botonPendiente" onClick="mostrarTareasPendientes()"><img src="../images/iconoBotonPendiente.svg" alt=""></button>
+                <button class="botonRealizado" onClick="mostrarTareasRealizadas()"><img src="../images/iconoBotonRealizado.svg" alt=""></button>
+            </div>
+            <div class="todoTareas">
+                <div id="nuevaTarea">
+                    <div id="insertarTarea"></div>
+                    <div id="añadirNuevaTarea"><button onclick="crearNuevaTarea()" id="botonAñadir">+ añadir nueva tarea </button></div>
+                </div>
+            </div>
+        </section>
+        <aside>
+            <div class="botonesSuperiores">
+                <input  type="button" value="Pomodoro" class="btnreloj" id="botonPomodoro" onClick="asignarPomodoro()">
+                <input type="button" value="Short Break" class="btnreloj" id="botonShortBreak" onClick="asignarShortBreak()">
+                <input type="button" value="Long Break" class="btnreloj" id="botonLongBreak" onClick="asignarLongBreak()">
+            </div>
+            <div class="timer"></div>
+            <div class="timerButtons">
+                <button class="btnPlay playAndPause"><img src="../images/play.svg" alt=""></button>
+                <button class="btnPause playAndPause"><img src="../images/pause.svg" alt=""></button>
+            </div>
+            <div class="infoTaks"> 
+                <span class="task"></span>     
+                <p class="numeroPomodoros"></p>
+            </div>
+            <div class="panelComandos">
+                <div class="comandoT">
+                    <div>COMANDOS</div>                    
+                </div>
+                <div class="comandoSubtitulos">
+                    <div>ACCION</div>    
+                    <div>ATAJO</div>                 
+                </div>
+                <div class="comandos">                
+                <div class="comando">
+                    <div class="p">
+                        <span>Pomodoro</span>
+                        <span>Letra P</span>
+                       
+                    </div>
+                </div>
+                <div class="comando">
+                    <div class="p">
+                        <span>Short Break</span>
+                        <span>Letra S</span>
+                       
+                    </div>
+                </div>
+                <div class="comando">
+                    <div class="p">
+                        <span>Long Break</span>
+                        <span>Letra P</span>                       
+                    </div>
+                </div>
+            </div>
+            </div>
+        </aside>
+    </main>    
+    <script src="script.js"></script>
+</body>
+</html>
